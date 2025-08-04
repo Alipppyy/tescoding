@@ -1,43 +1,87 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+import turtle
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+t = turtle.Turtle()
+t.speed(2) 
+t.pensize(2)
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+t.penup()
+t.left(90)
+t.forward(200)
+t.pendown()
+t.right(90)
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+t.fillcolor("red")
+t.begin_fill()
+t.circle(10, 180)
+t.circle(25, 110)
+t.left(50)
+t.circle(60, 45)
+t.circle(20, 170)
+t.right(24)
+t.forward(30)
+t.left(10)
+t.circle(30, 110)
+t.forward(20)
+t.left(40)
+t.circle(90, 70)
+t.circle(30, 150)
+t.right(30)
+t.forward(15)
+t.circle(80, 90)
+t.left(15)
+t.forward(45)
+t.right(165)
+t.forward(20)
+t.left(155)
+t.circle(150, 80)
+t.left(50)
+t.circle(150, 90)
+t.end_fill()
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+t.left(150)
+t.circle(-90, 70)
+t.left(20)
+t.circle(75, 105)
+t.setheading(60)
+t.circle(80, 98)
+t.circle(-90, 40)
+t.left(180)
+t.circle(90, 40)
+t.circle(-80, 98)
+t.setheading(-83)
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+t.forward(30)
+t.left(90)
+t.forward(25)
+t.left(45)
+t.fillcolor("green")
+t.begin_fill()
+t.circle(-80, 90)
+t.right(90)
+t.circle(-80, 90)
+t.end_fill()
+
+t.right(135)
+t.forward(60)
+t.left(180)
+t.forward(85)
+t.left(90)
+t.forward(80)
+t.right(90)
+t.right(45)
+
+t.fillcolor("green")
+t.begin_fill()
+t.circle(80, 90)
+t.left(90)
+t.circle(80, 90)
+t.end_fill()
+
+t.left(135)
+t.forward(60)
+t.left(180)
+t.forward(60)
+t.right(90)
+t.circle(200, 60)
+
+turtle.done()
